@@ -12,7 +12,7 @@
 
 ⚠️ **Nota:** las instrucciones deben siempre terminar con `;`. Es indiferente si las escribimos en una sola línea o en varias, utilizando indentación para que resulte más legible.
 
-Vamos a llamar _consulta_ o **_query_** a cada instrucción que termina con `;`. 
+👉 Vamos a llamar _consulta_ o **_query_** a cada instrucción que termina con `;`. Una _query_ es una sentencia que _declara_ qué información estamos buscando, dónde encontrarla dentro de la base de datos (qué tabla) y opcionalmente, cómo transformar esta información antes de retornarla.
 
 Una _query_ está compuesta por _comandos_ y _cláusulas_. 
 
@@ -103,7 +103,7 @@ VALUES
 
 ### `SELECT`
 
-Es el _comando_ que utilizamos para **seleccionar valores de una tabla**.
+Es el _comando_ que utilizamos para **seleccionar/obtener valores de una tabla**.
 
 Si queremos traer todas las columnas de una tabla, usamos el `*`
 
