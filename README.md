@@ -23,7 +23,7 @@ Una _query_ está compuesta por _comandos_ y _cláusulas_.
 
 ### `CREATE DATABASE`
 
-Es el _comando_ que utilizamos para crear una nueva base de datos.
+Es el _comando_ que utilizamos para **crear una nueva base de datos**.
 
 ```sql
 CREATE DATABASE testingdb;
@@ -38,7 +38,7 @@ CREATE DATABASE
 
 ### `CREATE TABLE`
 
-Es el _comando_ que utilizamos para crear una nueva tabla.
+Es el _comando_ que utilizamos para **crear una nueva tabla**.
 
 ```sql
 CREATE TABLE movies (
@@ -52,7 +52,7 @@ CREATE TABLE movies (
 
 ### `ALTER`
 
-Es un _comando_ que nos permite modificar una tabla.
+Es un _comando_ que nos permite **modificar una tabla**.
 
 Para **agregar una nueva columna**, usamos `ALTER` con `ADD`
 
@@ -74,7 +74,7 @@ DROP COLUMN
 
 ### `DROP`
 
-Es un _comando_ que nos permite eliminar tablas o la base de datos entera.
+Es un _comando_ que nos permite **eliminar tablas o la base de datos entera**.
 
 Para **eliminar una tabla**, usamos `DROP TABLE`
 
@@ -92,7 +92,7 @@ DROP DATABASE testingdb;
 
 ### `INSERT`
 
-Es el _comando_ que utilizamos para insertar valores en una tabla. 
+Es el _comando_ que utilizamos para **insertar valores en una tabla**. 
 
 ```sql
 INSERT INTO 
@@ -103,7 +103,7 @@ VALUES
 
 ### `SELECT`
 
-Es el _comando_ que utilizamos para **seleccionar/obtener valores de una tabla**.
+Es el _comando_ que utilizamos para **seleccionar/obtener valores de una o más tablas**.
 
 Si queremos traer todas las columnas de una tabla, usamos el `*`
 
@@ -125,7 +125,7 @@ SELECT title, rate FROM movies;
 
 ### `ORDER BY`
 
-Es la _cláusula_ que utilizamos para ordenar valores por cierto campo.
+Es la _cláusula_ que utilizamos para **ordenar valores por cierto campo**.
 
 Especificamos por qué campo ordenar. **Por default, ordena de forma ascendente**.
 
@@ -146,7 +146,7 @@ ORDER BY
 
 ### `WHERE`
 
-Es la _cláusula_ que utilizamos para setear las condiciones que deben cumplir los campos que queremos seleccionar
+Es la _cláusula_ que utilizamos para **setear las condiciones que deben cumplir los campos que queremos seleccionar**, es decir, **funciona como un filtro**
 
 ```sql
 SELECT 
@@ -157,9 +157,24 @@ WHERE
   rate > 7;
 ```
 
+### `LIMIT`
+
+Es la _cláusula_ que nos permite **limitar la cantidad de resultados (filas) a mostrar**. Por ejemplo, si sólo nos interesa el primer resultado, podemos hacer
+
+```sql
+SELECT 
+  title, rate 
+FROM 
+  movies
+WHERE
+  rate > 7
+LIMIT 
+  1;
+```
+
 ### `UPDATE`
 
-Es el _comando_ que utilizamos para actualizar el valor de un campo. Se usa junto con `SET`, para especificar los valores nuevos y `WHERE`, para especificar qué campo queremos modificar.
+Es el _comando_ que utilizamos para **actualizar el valor de un campo**. Se usa junto con `SET`, para especificar los valores nuevos y `WHERE`, para especificar qué campo queremos modificar.
 
 ```sql
 UPDATE
@@ -172,7 +187,7 @@ WHERE
 
 ### `DELETE`
 
-Es el _comando_ que utilizamos para eliminar registros de una tabla.
+Es el _comando_ que utilizamos para **eliminar registros de una tabla**.
 
 ```sql
 DELETE FROM
