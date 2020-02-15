@@ -184,3 +184,47 @@ WHERE
 :warning: **No te olvides de poner el `WHERE` en el `DELETE FROM`!**
 
 [![](https://img.youtube.com/vi/i_cVJgIz_Cs/0.jpg)](https://www.youtube.com/watch?v=i_cVJgIz_Cs)
+
+
+## Alias
+
+Podemos utilizar un _alias_ para una tabla o columna, de forma temporal. Se suelen utilizar para que el nombre de las columnas resulte más legible o descriptivo.
+
+Un _alias_ sólo existe temporalmente, al ejecutar una _query_, no estamos modificando una tabla ni nada similar.
+
+Por ejemplo, si queremos utilizar un alias para una columna, hacemos
+
+```SQL
+SELECT 
+  column_name AS alias_name
+FROM 
+  table_name;
+```
+
+y si queremos utilizar un alas para una tabla, hacemos
+ 
+```SQL
+SELECT 
+  column_name(s)
+FROM 
+  table_name AS alias_name;
+```
+
+## Funciones de agregación
+
+Las _funciones de agregación_ nos permiten efectuar operaciones sobre un conjunto de resultados, devolviendo un único valor agregado para todos ellos, como pueden ser la cantidad de filas, máximo, mínimo, promedio, etc.
+
+- `COUNT`: devuelve la cantidad total de filas seleccionadas por la query
+- `MIN`: devuelve el mínimo del campo que especifiquemos
+- `MAX`: devuelve el máximo del campo que especifiquemos
+- `SUM`: suma los valores del campo que especifiquemos (sólo se puede utilizar con datos de tipo numérico)
+- `AVG`: devuelve el valor promedio del campo que especifiquemos (sólo se puede utilizar con datos de tipo numérico)
+
+Por ejemplo, si queremos saber la cantidad total de filas de la tabla `earthquake`, podemos utilizar `COUNT` con el selector `*`
+
+```SQL
+SELECT
+  COUNT(*)
+FROM
+  earthquake;
+```
