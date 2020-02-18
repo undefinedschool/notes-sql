@@ -201,7 +201,6 @@ WHERE
 
 [![](https://img.youtube.com/vi/i_cVJgIz_Cs/0.jpg)](https://www.youtube.com/watch?v=i_cVJgIz_Cs)
 
-
 ## Alias
 
 Podemos utilizar un _alias_ para una tabla o columna, de forma temporal. Se suelen utilizar para que el nombre de las columnas resulte más legible o descriptivo.
