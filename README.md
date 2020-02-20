@@ -20,6 +20,9 @@ Una _query_ está compuesta por _comandos_ y _cláusulas_.
 - **Comandos:** son los que utilizamos para crear y definir nuevas bases de datos, campos e índices. También para seleccionar, insertar, eliminar y actualizar datos, generar consultas para ordenar, filtrar y extraer datos de la base de datos.
 - **Cláusulas:** son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular.
 
+[![Introduction to SQL](https://img.youtube.com/vi/OfM5lC-7R4Y/0.jpg)](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
+> Ver [Introduction to SQL](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
+
 ## Comandos para modificar el _schema_
 
 ### `CREATE DATABASE`
