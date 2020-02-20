@@ -149,7 +149,7 @@ ORDER BY
 
 ### `WHERE`
 
-Es la _cláusula_ que utilizamos para **setear las condiciones que deben cumplir los campos que queremos seleccionar**. Nos permite **especificar las filas que nos interesan**, por lo tanto, **funciona como un filtro**
+Es la _cláusula_ que utilizamos para **establecer las condiciones o criterios que deben cumplir los campos que queremos seleccionar**. Nos permite **especificar las filas que nos interesan** y por lo tanto, **funciona como un filtro**
 
 ```sql
 SELECT 
@@ -162,7 +162,7 @@ WHERE
 
 #### `AND`
 
-Podemos utilizar `AND` para combinar varias condiciones que deben cumplirse en el `WHERE`
+Podemos utilizar `AND` para combinar varios criterios que deben cumplirse en el `WHERE`
 
 ```sql
 SELECT 
@@ -175,7 +175,7 @@ WHERE
 
 #### `OR`
 
-Podemos utilizar `AND` para establecer distintas condiciones, de las que al menos 1 debe cumplirse en el `WHERE`
+Podemos utilizar `AND` para establecer distintos criterios, de los que al menos 1 debe cumplirse en el `WHERE`
 
 ```sql
 SELECT 
