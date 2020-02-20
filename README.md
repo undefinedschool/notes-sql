@@ -128,13 +128,15 @@ SELECT title, rate FROM movies;
 
 Es la _cláusula_ que utilizamos para **ordenar valores por cierto campo**.
 
-Especificamos por qué campo ordenar. **Por default, ordena de forma ascendente**.
+**Tenemos que especificar por qué columna queremos ordenar**. 
+
+**Por default, ordena de forma ascendente**.
 
 ```sql
 SELECT title, rate FROM movies ORDER BY rate;
 ```
 
-Podemos especificar el orden agregando `ASC|DESC`
+Podemos especificar el orden agregando `ASC` ó `DESC` al final
 
 ```sql
 SELECT 
