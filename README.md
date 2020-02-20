@@ -158,6 +158,32 @@ WHERE
   rate > 7;
 ```
 
+#### `AND`
+
+Podemos utilizar `AND` para combinar varias condiciones que deben cumplirse en el `WHERE`
+
+```sql
+SELECT 
+  title, rate 
+FROM 
+  movies
+WHERE
+  rate >= 3 AND rate <= 7;
+```
+
+#### `OR`
+
+Podemos utilizar `AND` para establecer distintas condiciones, de las que al menos 1 debe cumplirse en el `WHERE`
+
+```sql
+SELECT 
+  title, rate 
+FROM 
+  movies
+WHERE
+  rate <= 4 OR rate >= 7;
+```
+
 ### `LIMIT`
 
 Es la _cláusula_ que nos permite **limitar la cantidad de resultados (filas) a mostrar**. Por ejemplo, si sólo nos interesa el primer resultado, podemos hacer
