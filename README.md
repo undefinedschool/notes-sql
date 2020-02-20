@@ -118,7 +118,7 @@ Si queremos ver sólo los títulos, tenemos que especificar la columna (en este 
 SELECT title FROM movies;
 ```
 
-También podemos traer varias columnas
+También podemos traer varias columnas. El orden en el que las seleccionemos será el orden en el que vendrán los resultados
 
 ```sql
 SELECT title, rate FROM movies;
