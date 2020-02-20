@@ -293,13 +293,22 @@ FROM
   table_name;
 ```
 
-y si queremos utilizar un alas para una tabla, hacemos
+y si queremos utilizar un alias para una tabla, hacemos
  
 ```SQL
 SELECT 
   column_name(s)
 FROM 
   table_name AS alias_name;
+```
+
+Si queremos utilizar un alias con espacios, tenemos que ponerlo entre comillas (simples o dobles)
+ 
+```SQL
+SELECT 
+  column_name(s)
+FROM 
+  table_name AS 'alias name';
 ```
 
 ## Comentarios
@@ -314,6 +323,41 @@ FROM
 -- WHERE rate > 7
 -- LIMIT 1;
 ```
+
+## Expresiones
+
+Podemos utilizar expresiones para hacer consultas con una lógica un poco más compleja. Estas expresiones puedem por ejemplo, utilizar operaciones matemáticas de aritmética básica
+
+```SQL
+SELECT
+  first_name,
+  last_name,
+  points + 10
+FROM
+  customers;
+```
+
+Los operadores aritméticos que podemos utilizar son
+
+- suma (`+`)
+- resta (`-`)
+- multiplicación (`*`)
+- división (`/`)
+- módulo (resto de la división) (`%`)
+
+> En las operaciones aritméticas, los operadores de multiplicación (`*`) y división (`/`) tienen precedencia sobre el resto (al igual que en JavaScript). Si queremos _forzar_ cierto orden de ejecución, podemos utilizar paréntesis.
+
+Por ejemplo, si quisiéramos primero realizar la suma y luego la multiplicación, deberíamos hacer
+
+```SQL
+SELECT
+  first_name,
+  last_name,
+  (points + 10) * 100
+FROM
+  customers;
+```
+
 ## Funciones de agregación
 
 Las _funciones de agregación_ nos permiten efectuar operaciones sobre un conjunto de resultados, devolviendo un único valor agregado para todos ellos, como pueden ser la cantidad de filas, máximo, mínimo, promedio, etc.
