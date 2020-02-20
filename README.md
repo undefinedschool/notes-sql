@@ -199,6 +199,15 @@ ORDER BY
 
 #### Operadores
 
+##### `Comparación`
+
+- mayor (`>`)
+- mayor o igual (`>=`)
+- menor (`<`)
+- menor o igual (`<=`)
+- igualdad (`=`)
+- desigualdad (`!=` o `<>`)
+
 ##### `AND`
 
 Podemos utilizar `AND` para combinar varios criterios que deben cumplirse en el `WHERE`
