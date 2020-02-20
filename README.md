@@ -18,7 +18,7 @@
 Una _query_ está compuesta por _comandos_ y _cláusulas_. 
 
 - **Comandos:** son los que utilizamos para crear y definir nuevas bases de datos, campos e índices. También para seleccionar, insertar, eliminar y actualizar datos, generar consultas para ordenar, filtrar y extraer datos de la base de datos.
-- **Cláusulas:** son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular.
+- **Cláusulas:** son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular. **El orden de las cláusulas importa**.
 
 [![Introduction to SQL](https://img.youtube.com/vi/OfM5lC-7R4Y/0.jpg)](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
 > Ver [Introduction to SQL](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
@@ -39,6 +39,14 @@ También podríamos escribir la instrucción en 2 líneas, porque lo importante 
 CREATE DATABASE 
   testingdb;
 ```
+
+> 👉 **SQL no es _case sensitive_** es decir, no diferencia entre mayúsculas y minúsculas, por lo que podríamos escribir la query anterior de la forma
+
+```sql
+create database testingdb;
+```
+
+Por convención, se suele utilizar mayúsculas para comandos y cláusulas y minúsculas para el resto.
 
 ### `CREATE TABLE`
 
@@ -127,6 +135,17 @@ También podemos traer varias columnas. El orden en el que las seleccionemos ser
 SELECT title, rate FROM movies;
 ```
 
+#### `DISTINCT`
+
+Si queremos filtrar datos (filas) duplicados, podemos utilizar `DISTINCT` junto con `SELECT`
+
+```SQL
+SELECT DISTINCT
+  cause
+FROM
+  earthquake;
+```
+
 ### `ORDER BY`
 
 Es la _cláusula_ que utilizamos para **ordenar valores por cierto campo**.
@@ -163,7 +182,24 @@ WHERE
   rate > 7;
 ```
 
-#### `AND`
+Combinándola con el `ORDER BY`, podemos hacer
+
+```sql
+SELECT 
+  title, rate 
+FROM 
+  movies 
+WHERE
+  rate > 7
+ORDER BY 
+  rate DESC;
+```
+
+> 👉 Como dijimos al principio, **el orden de las cláusulas importa**: `SELECT`, `FROM`, `WHERE` y `ORDER BY` siempre deben usarse en ese orden y no en otro, sino tendremos un error de sintaxis y la instrucción no va a ejecutarse.
+
+#### Operadores
+
+##### `AND`
 
 Podemos utilizar `AND` para combinar varios criterios que deben cumplirse en el `WHERE`
 
@@ -176,7 +212,7 @@ WHERE
   rate >= 3 AND rate <= 7;
 ```
 
-#### `OR`
+##### `OR`
 
 Podemos utilizar `AND` para establecer distintos criterios, de los que al menos 1 debe cumplirse en el `WHERE`
 
@@ -188,6 +224,16 @@ FROM
 WHERE
   rate <= 4 OR rate >= 7;
 ```
+
+##### `NOT`
+
+##### `IN`
+
+##### `LIKE`
+
+##### `BETWEEN`
+
+##### `IS NULL`
 
 ### `LIMIT`
 
@@ -256,6 +302,18 @@ FROM
   table_name AS alias_name;
 ```
 
+## Comentarios
+
+Podemos comentar código SQL agregando `--` delante. Como siempre, **el código comentado no se ejecuta**.
+
+```sql
+SELECT 
+  title, rate 
+FROM 
+  movies;
+-- WHERE rate > 7
+-- LIMIT 1;
+```
 ## Funciones de agregación
 
 Las _funciones de agregación_ nos permiten efectuar operaciones sobre un conjunto de resultados, devolviendo un único valor agregado para todos ellos, como pueden ser la cantidad de filas, máximo, mínimo, promedio, etc.
