@@ -443,7 +443,7 @@ LIMIT
 
 ### `UPDATE`
 
-Es el _comando_ que utilizamos para **actualizar el valor de un campo**. Se usa junto con `SET`, para especificar los valores nuevos y `WHERE`, para especificar qué campo queremos modificar.
+Es el _comando_ que utilizamos para **actualizar el valor de un campo** de una tabla determinada. Se usa junto con `SET`, para especificar los valores nuevos y `WHERE`, para especificar qué campo queremos modificar.
 
 ```sql
 UPDATE
@@ -454,9 +454,24 @@ WHERE
   title = 'Gattaca';
 ```
 
+> ⚠️ Es importante **no olvidarnos del `WHERE`, si no vamos a modificar todas las filas de la tabla!** (salvo que estemos buscando hacer eso)
+
+También podemos modificar varios campos simultáneamente
+
+```SQL
+UPDATE
+  secret_user
+SET
+  code_name = 'Neo 2.0', salary = 115000
+WHERE
+  user_id = 7;
+```
+
 ### `DELETE`
 
 Es el _comando_ que utilizamos para **eliminar registros de una tabla**.
+
+> 👉 **`DELETE` elimina registros (filas), no columnas**. Para hacer esto último, tendríamos que utilizar [`ALTER`](https://github.com/undefinedschool/notes-sql#alter) junto con `DROP COLUMN`
 
 ```sql
 DELETE FROM
@@ -465,7 +480,7 @@ WHERE
   title = 'Gattaca';
 ```
 
-:warning: **No te olvides de poner el `WHERE` en el `DELETE FROM`!**
+> :warning: **No te olvides de poner el `WHERE` en el `DELETE FROM`!**
 
 [![](https://img.youtube.com/vi/i_cVJgIz_Cs/0.jpg)](https://www.youtube.com/watch?v=i_cVJgIz_Cs)
 
@@ -513,6 +528,19 @@ FROM
   movies;
 -- WHERE rate > 7
 -- LIMIT 1;
+```
+
+También podemos comentar varias líneas a la vez, usando `/* */`
+
+```sql
+SELECT 
+  title, rate 
+FROM 
+  movies;
+/* 
+WHERE rate > 7
+LIMIT 1; 
+*/
 ```
 
 ## Expresiones
