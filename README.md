@@ -84,6 +84,24 @@ DROP COLUMN
   remove_this;
 ```
 
+Para cambiar el tipo de dato o las restricciones
+
+```SQL
+ALTER 
+  TABLE post
+ALTER 
+  COLUMN posted_on
+  TYPE VARCHAR(100);
+```
+
+```SQL
+ALTER 
+  TABLE post
+ALTER 
+  COLUMN posted_on
+  SET DEFAULT CURRENT_TIMESTAMP;
+```
+
 ### `DROP`
 
 Es un _comando_ que nos permite **eliminar tablas o la base de datos entera**.
