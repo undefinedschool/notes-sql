@@ -242,7 +242,29 @@ WHERE
 
 ##### `BETWEEN`
 
-##### `IS NULL`
+##### `IS/IS NOT NULL`
+
+Representa la ausencia de valor definido. Por ejemplo, si nos interesan sólo aquellos resultados donde el valor de cierto campo no sea nulo,
+
+```SQL
+SELECT 
+  column, another_column
+FROM 
+  mytable
+WHERE 
+  column IS NOT NULL;
+```
+
+Para traer resultados donde un campo es nulo, la query es análoga, esta vez utilizando `IS NULL`
+
+```SQL
+SELECT 
+  column, another_column
+FROM 
+  mytable
+WHERE 
+  column IS NULL;
+```
 
 ### `LIMIT`
 
@@ -335,13 +357,13 @@ FROM
 
 ## Expresiones
 
-Podemos utilizar expresiones para hacer consultas con una lógica un poco más compleja. Estas expresiones puedem por ejemplo, utilizar operaciones matemáticas de aritmética básica
+Podemos utilizar expresiones para hacer consultas con una lógica un poco más compleja. Estas expresiones pueden por ejemplo, utilizar operaciones matemáticas de aritmética básica y operaciones con strings o fechas
 
 ```SQL
 SELECT
   first_name,
   last_name,
-  points + 10
+  points + 10 AS total_points
 FROM
   customers;
 ```
