@@ -129,6 +129,16 @@ VALUES
   ('Gattaca', 'In a future society in the era of indefinite eugenics, humans are set on a life course depending on their DNA. Young Vincent Freeman is born with a condition that would prevent him from space travel, yet is determined to infiltrate the GATTACA space program.', '1997-10-24', 7.50);
 ```
 
+> 👉 **Podemos insertar varias filas a la vez**, separando por comas. **Esta operación es mucho más eficiente que insertar de a una fila por vez**.
+
+```SQL
+INSERT INTO post
+  (user_id, post_text)
+VALUES
+  (1, 'Hello, World!')
+  (2, 'Hello again, world!');
+```
+
 ### `SELECT`
 
 Es el _comando_ que utilizamos para **seleccionar/obtener valores de una o más tablas**.
