@@ -84,21 +84,19 @@ DROP COLUMN
   remove_this;
 ```
 
-Para cambiar el tipo de dato o las restricciones
+Para cambiar el tipo de dato
 
 ```SQL
-ALTER 
-  TABLE post
-ALTER 
-  COLUMN posted_on
+ALTER TABLE post
+ALTER COLUMN posted_on
   TYPE VARCHAR(100);
 ```
 
+o las restricciones (setear valores por default, campo no _nulleable_, etc)
+
 ```SQL
-ALTER 
-  TABLE post
-ALTER 
-  COLUMN posted_on
+ALTER TABLE post
+ALTER COLUMN posted_on
   SET DEFAULT CURRENT_TIMESTAMP;
 ```
 
