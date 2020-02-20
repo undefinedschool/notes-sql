@@ -357,7 +357,7 @@ FROM
 
 ## Expresiones
 
-Podemos utilizar expresiones para hacer consultas con una lógica un poco más compleja. Estas expresiones pueden por ejemplo, utilizar operaciones matemáticas de aritmética básica y operaciones con strings o fechas
+Podemos utilizar [expresiones](https://sqlbolt.com/lesson/select_queries_with_expressions) para hacer consultas con una lógica un poco más compleja. Estas expresiones pueden por ejemplo, utilizar operaciones matemáticas de aritmética básica y operaciones con strings o fechas. **Se recomienda utilizar [alias](https://github.com/undefinedschool/notes-sql#alias) para que las expresiones resulten más legibles**.
 
 ```SQL
 SELECT
