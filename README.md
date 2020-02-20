@@ -278,11 +278,78 @@ NOT (OR)                       => AND
 NOT (points > 100)             => (points <= 100)
 ```
 
-##### `IN`
+##### `IN/NOT IN`
+
+Es útil cuando un campo puede matchear con varios valores posibles, algo que haríamos utilizando varios `OR`
+
+Por ejemplo, en lugar de hacer
+
+```SQL
+SELECT *
+FROM customers
+WHERE state = 'VA' 
+  OR state = 'MI' 
+  OR state = 'FL';
+```
+
+podemos utilizar `IN` para simplificar
+
+```SQL
+SELECT *
+FROM customers
+WHERE state IN ('VA', 'MI', 'FL');
+```
+
+También se puede negar, para obtener el complemento. Si nos interesan aquellos `customers` que no pertenecen al estado de 'VA', 'MI' o 'FL', hacemos 
+
+```SQL
+SELECT *
+FROM customers
+WHERE state NOT IN ('VA', 'MI', 'FL');
+```
 
 ##### `LIKE`
 
+Sirve para **obtener aquellas filas que matcheen cierto patrón de caracteres**.
+
+Por ejemplo, si queremos obtener todos aquellos `customers` cuyo apellido empiece con 'b', podemos hacer
+
+```SQL
+SELECT *
+FROM customers
+WHERE last_name LIKE 'b%'
+```
+
+El símbolo `%` significa que no nos interesan qué caracteres (ni cuántos, incluyendo 0) vengan después. El `%` puede estar en cualquier parte del patrón (al principio, entre otros caracteres o al final).
+
+Por ejemplo, si nos interesan aquellos `customers` cuyo apellido tenga una letra 'b' en cualquier parte del apellido, podemos hacer
+
+```SQL
+SELECT *
+FROM customers
+WHERE last_name LIKE '%b%'
+```
+
+> 👉 Notas que estamos usando `'b%'` como patrón, es indistinto si usamos mayúsculas o minúsculas (`'b%'` o `'B%'`), no es _case_sensitive_
+
 ##### `BETWEEN`
+
+Se utiliza para obtener resultados que se encuentren dentro de cierto rango (numérico, fechas, etc)
+
+```SQL
+SELECT *
+FROM customers
+WHERE points BETWEEN 100 AND 500;
+```
+
+Esto es equivalente a hacer
+
+```SQL
+SELECT *
+FROM customers
+WHERE points >= 100 
+  AND points <= 500;
+```
 
 ##### `IS/IS NOT NULL`
 
