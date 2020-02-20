@@ -147,7 +147,7 @@ ORDER BY
 
 ### `WHERE`
 
-Es la _cláusula_ que utilizamos para **setear las condiciones que deben cumplir los campos que queremos seleccionar**, es decir, **funciona como un filtro**
+Es la _cláusula_ que utilizamos para **setear las condiciones que deben cumplir los campos que queremos seleccionar**. Nos permite **especificar las filas que nos interesan**, por lo tanto, **funciona como un filtro**
 
 ```sql
 SELECT 
