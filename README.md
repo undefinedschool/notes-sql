@@ -358,6 +358,31 @@ WHERE last_name LIKE '%b%'
 
 > 👉 Notas que estamos usando `'b%'` como patrón, es indistinto si usamos mayúsculas o minúsculas (`'b%'` o `'B%'`), no es _case_sensitive_
 
+**Si en cambio queremos indicar que antes (o después) de cierto caracter puede haber sólo una cantidad exacta, utilizamos `_`**.
+
+Entonces si queremos obtener aquellos `customers` cuyo apellido tenga exactamente 1 caracter (cualquiera) antes de la letra 'b' y cualquier caracter después, podemos hacer
+
+```SQL
+SELECT *
+FROM customers
+WHERE last_name LIKE '_b%'
+```
+
+Si queremos obtener aquellos `customers` cuyo apellido tenga exactamente 5 caracteres (cualesquiera), finalizando con la letra 'b', podemos hacer
+
+```SQL
+SELECT *
+FROM customers
+WHERE last_name LIKE '____b'
+```
+
+En resumen:
+
+- `%` representa cualquier cantidad de caracteres
+- `_` representa 1 único caracter
+
+> 👉 Ver más detalles sobre [PostgreSQL LIKE](https://www.postgresqltutorial.com/postgresql-like/)
+
 ##### `BETWEEN`
 
 Se utiliza para obtener resultados que se encuentren dentro de cierto rango (numérico, fechas, etc)
