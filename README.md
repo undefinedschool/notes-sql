@@ -106,13 +106,13 @@ VALUES
 
 Es el _comando_ que utilizamos para **seleccionar/obtener valores de una o más tablas**.
 
-Si queremos traer todas las columnas de una tabla, usamos el `*`
+Si queremos traer todas las columnas de la tabla `movies`, usamos el `*`
 
 ```sql
 SELECT * FROM movies;
 ```
 
-Si queremos ver sólo los títulos, tenemos que especificar la columna
+Si queremos ver sólo los títulos, tenemos que especificar la columna (en este caso, `title`)
 
 ```sql
 SELECT title FROM movies;
