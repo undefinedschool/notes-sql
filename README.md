@@ -274,3 +274,12 @@ SELECT
 FROM
   earthquake;
 ```
+
+Si queremos conocer el rango de fechas, podemos utilizar `MIN` y `MAX` con el selector `occurred_on`, donde este último representa la fecha en la que ocurrió el evento
+
+```SQL
+SELECT
+  MIN(occurred_on), MAX(occurred_on)
+FROM
+  earthquake;
+```
