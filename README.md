@@ -210,7 +210,7 @@ ORDER BY
 
 ##### `AND`
 
-Podemos utilizar `AND` para combinar varios criterios que deben cumplirse en el `WHERE`
+Podemos utilizar `AND` para **combinar varios criterios que deben cumplirse** en el `WHERE`
 
 ```sql
 SELECT 
@@ -223,7 +223,7 @@ WHERE
 
 ##### `OR`
 
-Podemos utilizar `AND` para establecer distintos criterios, de los que al menos 1 debe cumplirse en el `WHERE`
+Podemos utilizar `AND` para **establecer distintos criterios, de los que al menos 1 debe cumplirse** en el `WHERE`
 
 ```sql
 SELECT 
@@ -234,7 +234,49 @@ WHERE
   rate <= 4 OR rate >= 7;
 ```
 
+> 👉 Al igual que en JavaScript, los diferentes operadores pueden combinarse para definir criterios más complejos
+
+```SQL
+SELECT 
+  *
+FROM
+  customers
+WHERE
+  birthdate > '1990-01-01' OR points > 100;
+```
+
 ##### `NOT`
+
+Sirve para negar un criterio y obtener el opuesto, para obtener todos aquellos que no lo cumplan
+
+```SQL
+SELECT 
+  *
+FROM
+  customers
+WHERE
+  NOT (birthdate > '1990-01-01' OR points > 100);
+```
+
+En este caso, la cláusula
+
+```SQL
+ NOT (birthdate > '1990-01-01' OR points > 100)
+```
+
+es equivalente a hacer
+ 
+```SQL
+WHERE birthdate <= '1990-01-01' AND points <= 100
+```
+
+porque si negamos cada parte, tenemos
+
+```
+NOT (birthdate > '1990-01-01') => (birthdate <= '1990-01-01')
+NOT (OR)                       => AND 
+NOT (points > 100)             => (points <= 100)
+```
 
 ##### `IN`
 
