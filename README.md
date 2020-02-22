@@ -174,11 +174,11 @@ FROM
 
 ### `ORDER BY`
 
-Es la _cláusula_ que utilizamos para **ordenar valores por cierto campo**.
+Es la _cláusula_ que utilizamos para **ordenar valores por cierto campo**. Si no utilizamos `ORDER BY`, el orden por default de los valores de una tabla es según el `id` de las filas.
 
 **Tenemos que especificar por qué columna queremos ordenar**. 
 
-**Por default, ordena de forma ascendente**.
+**Por default, ordena de forma ascendente** (`ASC`).
 
 ```sql
 SELECT title, rate FROM movies ORDER BY rate;
@@ -193,6 +193,14 @@ FROM
   movies 
 ORDER BY 
   rate DESC;
+```
+
+También podemos ordenar por múltiples campos. En el siguiente ejemplo, ordenaríamos primero por `state` y luego (entre registros que tengan el mismo valor de `state`) por `first_name`, de forma descendiente. Podemos utilizar `ASC` y `DESC` de forma separada para cada campo
+
+```SQL
+SELECT *
+FROM customers
+ORDER BY state DESC, first_name DESC;
 ```
 
 ### `WHERE`
