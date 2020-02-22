@@ -404,26 +404,20 @@ WHERE points >= 100
 
 ##### `IS/IS NOT NULL`
 
-Representa la ausencia de valor definido. Por ejemplo, si nos interesan sólo aquellos resultados donde el valor de cierto campo no sea nulo,
+Representa la ausencia de valor definido. Por ejemplo, si nos interesan sólo aquellos `customers` con el número de teléfono definido,
 
 ```SQL
-SELECT 
-  column, another_column
-FROM 
-  mytable
-WHERE 
-  column IS NOT NULL;
+SELECT *
+FROM customers
+WHERE phone IS NOT NULL;
 ```
 
-Para traer resultados donde un campo es nulo, la query es análoga, esta vez utilizando `IS NULL`
+Para traer resultados donde un campo es nulo, ya sea porque no nos interesa el valor de este campo o queremos saber si faltan ciertos datos, la query es análoga, esta vez utilizando `IS NULL`. Por ejemplo, si nos interesan saber a qué `customers` les falta el número de teléfono, podemos hacer
 
 ```SQL
-SELECT 
-  column, another_column
-FROM 
-  mytable
-WHERE 
-  column IS NULL;
+SELECT *
+FROM customers
+WHERE phone IS NULL;
 ```
 
 ### `LIMIT`
