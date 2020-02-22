@@ -443,6 +443,18 @@ LIMIT
   1;
 ```
 
+#### `OFFSET`
+
+Opcionalmente (por ejemplo, si queremos utilizar [paginación](https://www.citusdata.com/blog/2016/03/30/five-ways-to-paginate/)), podemos proveer (como primer parámetro) un `OFFSET` para saltear algunos registros
+
+Por ejemplo, si queremos limitar los resultados a 3 y saltear los primeros 6 registros, podemos hacer
+
+```SQL
+SELECT *
+FROM customers
+LIMIT 6, 3 /* offset: 6, limit: 3 */
+```
+
 ### `UPDATE`
 
 Es el _comando_ que utilizamos para **actualizar el valor de un campo** de una tabla determinada. Se usa junto con `SET`, para especificar los valores nuevos y `WHERE`, para especificar qué campo queremos modificar.
