@@ -3,7 +3,7 @@
 
 > 👉 Si te resultó útil, **se agradece que lo compartas para que le llegue a más gente!**
 
-![Notas sobre SQL](https://i.imgur.com/wTVGbtA.png)
+# ![Notas sobre SQL](https://i.imgur.com/wTVGbtA.png)
 
 ## Contenido
 
