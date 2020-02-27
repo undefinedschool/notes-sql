@@ -7,37 +7,37 @@
 
 ## Contenido
 
-- [Intro]()
-- [Comandos y cláusulas]()
-- [Comandos para modificar el _schema_]()
-  - [`CREATE DATABASE`]()
-  - [`CREATE TABLE`]()
-  - [`ALTER`]()
-  - [`DROP`]()
-- [Comandos para trabajar con los datos]()
-  - [`INSERT`]()
-  - [`SELECT`]()
-    - [`DISTINCT`]()
-  - [`ORDER BY`]()
-  - [`WHERE`]()
-  - [`LIMIT`]()
-  - [`OFFSET`]()
-  - [`UPDATE`]()
-  - [`DELETE`]()
-- [Operadores]()
-  - [Comparación]()
-  - [`AND`]()
-  - [`OR`]()
-  - [`NOT`]()
-  - [`IN/NOT IN`]()
-  - [`LIKE`]()
-  - [`BETWEEN`]()
-  - [`IS/IS NOT NULL`]()
-- [Alias]()
-- [Comentarios]()
-- [Expresiones]()
-- [Funciones de agregación]()
-- [Índices]()
+- [Intro](https://github.com/undefinedschool/notes-sql#intro)
+- [Comandos y cláusulas](https://github.com/undefinedschool/notes-sql#comandos-y-cl%C3%A1usulas)
+- [Comandos para modificar el _schema_](https://github.com/undefinedschool/notes-sql#comandos-para-modificar-el-schema)
+  - [`CREATE DATABASE`](https://github.com/undefinedschool/notes-sql#create-database)
+  - [`CREATE TABLE`](https://github.com/undefinedschool/notes-sql#create-table)
+  - [`ALTER`](https://github.com/undefinedschool/notes-sql#alter)
+  - [`DROP`](https://github.com/undefinedschool/notes-sql#drop)
+- [Comandos para trabajar con los datos](https://github.com/undefinedschool/notes-sql#comandos-para-trabajar-con-los-datos)
+  - [`INSERT`](https://github.com/undefinedschool/notes-sql#insert)
+  - [`SELECT`](https://github.com/undefinedschool/notes-sql#select)
+    - [`DISTINCT`](https://github.com/undefinedschool/notes-sql#distinct)
+  - [`ORDER BY`](https://github.com/undefinedschool/notes-sql#order-by)
+  - [`WHERE`](https://github.com/undefinedschool/notes-sql#where)
+  - [`LIMIT`](https://github.com/undefinedschool/notes-sql#limit)
+  - [`OFFSET`](https://github.com/undefinedschool/notes-sql#offset)
+  - [`UPDATE`](https://github.com/undefinedschool/notes-sql#update)
+  - [`DELETE`](https://github.com/undefinedschool/notes-sql#delete)
+- [Operadores](https://github.com/undefinedschool/notes-sql#operadores)
+  - [Comparación](https://github.com/undefinedschool/notes-sql#comparaci%C3%B3n)
+  - [`AND`](https://github.com/undefinedschool/notes-sql#and)
+  - [`OR`](https://github.com/undefinedschool/notes-sql#or)
+  - [`NOT`](https://github.com/undefinedschool/notes-sql#not)
+  - [`IN/NOT IN`](https://github.com/undefinedschool/notes-sql#innot-in)
+  - [`LIKE`](https://github.com/undefinedschool/notes-sql#like)
+  - [`BETWEEN`](https://github.com/undefinedschool/notes-sql#between)
+  - [`IS/IS NOT NULL`](https://github.com/undefinedschool/notes-sql#isis-not-null)
+- [Alias](https://github.com/undefinedschool/notes-sql#alias)
+- [Comentarios](https://github.com/undefinedschool/notes-sql#comentarios)
+- [Expresiones](https://github.com/undefinedschool/notes-sql#expresiones)
+- [Funciones de agregación](https://github.com/undefinedschool/notes-sql#funciones-de-agregaci%C3%B3n)
+- [Índices](https://github.com/undefinedschool/notes-sql#%C3%ADndices)
 
 ---
 
@@ -53,15 +53,15 @@
 
 👉 Vamos a llamar _consulta_ o **_query_** a cada instrucción que termina con `;`. Una _query_ es una sentencia que _declara_ qué información estamos buscando, dónde encontrarla dentro de la base de datos (qué tabla) y opcionalmente, cómo transformar esta información antes de retornarla.
 
+[![Introduction to SQL](https://img.youtube.com/vi/OfM5lC-7R4Y/0.jpg)](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
+> Ver [Introduction to SQL](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
+
 ## Comandos y cláusulas
 
 Una _query_ está compuesta por _comandos_ y _cláusulas_. 
 
 - **Comandos:** son los que utilizamos para crear y definir nuevas bases de datos, campos e índices. También para seleccionar, insertar, eliminar y actualizar datos, generar consultas para ordenar, filtrar y extraer datos de la base de datos.
 - **Cláusulas:** son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular. **El orden de las cláusulas importa**.
-
-[![Introduction to SQL](https://img.youtube.com/vi/OfM5lC-7R4Y/0.jpg)](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
-> Ver [Introduction to SQL](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
 
 ## Comandos para modificar el _schema_
 
