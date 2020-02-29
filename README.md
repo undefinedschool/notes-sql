@@ -351,6 +351,11 @@ WHERE
 
 > ⚠️ Es importante **no olvidarnos del `WHERE`, si no vamos a modificar todas las filas de la tabla!** (salvo que estemos buscando hacer eso)
 
+```SQL
+UPDATE users SET first_name = 'Elie'; -- will update all users
+UPDATE users SET first_name = 'Elie' WHERE id = 1; -- will update a user with an id of 1
+```
+
 También podemos modificar varios campos simultáneamente
 
 ```SQL
@@ -373,6 +378,11 @@ DELETE FROM
   movies
 WHERE
   title = 'Gattaca';
+```
+
+```SQL
+DELETE FROM users; -- will delete all users
+DELETE FROM users WHERE id=1; -- will delete a user with an id of 1
 ```
 
 > :warning: **No te olvides de poner el `WHERE` en el `DELETE FROM`!**
