@@ -5,6 +5,11 @@
 
 # ![Notas sobre SQL](https://i.imgur.com/wTVGbtA.png)
 
+## Notas Bases de Datos
+
+- [**Bases de Datos**](https://github.com/undefinedschool/notes-dbs)
+- [**SQL**](https://github.com/undefinedschool/notes-sql/)
+
 ## Contenido
 
 - [Intro](https://github.com/undefinedschool/notes-sql#intro)
