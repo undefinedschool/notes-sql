@@ -20,6 +20,7 @@
   - [`ALTER`](https://github.com/undefinedschool/notes-sql#alter)
   - [`DROP`](https://github.com/undefinedschool/notes-sql#drop)
 - [DML: Comandos para trabajar con los datos](https://github.com/undefinedschool/notes-sql/blob/master/README.md#dml-comandos-para-trabajar-con-los-datos)
+  - [CRUD](https://github.com/undefinedschool/notes-sql#crud)
   - [`INSERT`](https://github.com/undefinedschool/notes-sql#insert)
   - [`SELECT`](https://github.com/undefinedschool/notes-sql#select)
     - [`DISTINCT`](https://github.com/undefinedschool/notes-sql#distinct)
@@ -136,20 +137,32 @@ DROP COLUMN
   remove_this;
 ```
 
-Para cambiar el tipo de dato
+Para **renombrar una columna**, usamos `ALTER` con `RENAME`
+
+```sql
+ALTER TABLE users 
+RENAME COLUMN jobb TO job;
+```
+
+Para **cambiar el tipo de dato de una columna**
 
 ```SQL
 ALTER TABLE post
 ALTER COLUMN posted_on
-  TYPE VARCHAR(100);
+SET DATA TYPE VARCHAR(100);
 ```
 
-o las restricciones (setear valores por default, campo no _nulleable_, etc)
+o las [_constraints_](https://github.com/undefinedschool/notes-dbs#constraints) (setear valores por default, campo no _nulleable_, etc)
 
 ```SQL
 ALTER TABLE post
 ALTER COLUMN posted_on
   SET DEFAULT CURRENT_TIMESTAMP;
+```
+
+```SQL
+ALTER TABLE users 
+ADD CONSTRAINT favorite_number NOT NULL;
 ```
 
 ### `DROP`
@@ -171,6 +184,17 @@ DROP DATABASE testingdb;
 ## DML: Comandos para trabajar con los datos
 
 Los comandos _DML_ (Data Manipulation Language) son aquellos que utilizamos para crear, leer, modificar, manipular y eliminar datos de registros (filas).
+
+### CRUD
+
+Cuando realizamos [_operaciones CRUD_](https://github.com/undefinedschool/notes-apis#crud) en las filas (no columnas, tablas o bases de datos), estamos utilizando DML.
+
+| CRUD | SQL |
+| ---- | --- |
+| Create | INSERT |
+| Read | SELECT |
+| Update | UPDATE |
+| Delete | DELETE |
 
 ### `INSERT`
 
