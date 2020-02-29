@@ -66,7 +66,9 @@ Una _query_ está compuesta por _comandos_ y _cláusulas_.
 - **Comandos:** son los que utilizamos para crear y definir nuevas bases de datos, campos e índices. También para seleccionar, insertar, eliminar y actualizar datos, generar consultas para ordenar, filtrar y extraer datos de la base de datos.
 - **Cláusulas:** son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular. **El orden de las cláusulas importa**.
 
-## Comandos para modificar el _schema_
+## DDL: Comandos para modificar el _schema_
+
+Los comandos _DDL_ (Data Definition Language) son aquellos que utilizamos para crear, modificar y eliminar tablas, columnas y bases de datos.
 
 ### `CREATE DATABASE`
 
@@ -159,7 +161,9 @@ Para **eliminar una db**, usamos `DROP DATABASE`
 DROP DATABASE testingdb;
 ```
 
-## Comandos para trabajar con los datos
+## DML: Comandos para trabajar con los datos
+
+Los comandos _DML_ (Data Manipulation Language) son aquellos que utilizamos para crear, leer, modificar, manipular y eliminar datos de registros (filas).
 
 ### `INSERT`
 
