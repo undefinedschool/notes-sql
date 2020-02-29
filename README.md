@@ -112,6 +112,8 @@ CREATE TABLE movies (
 );
 ```
 
+En el ejemplo de arriba, `movies` es el nombre de la tabla que estamos creando. `id`, `title`, `overview`, `release_date` y `remove_this` son columnas que estamos definiendo en la tabla. `SERIAL`, `VARCHAR`, `CHAR` y `DATE` son ejemplos de [tipos de datos](https://github.com/undefinedschool/notes-dbs#tipos-de-datos). `PRIMARY KEY` es una _constraint_ (restricción) impuesta en la columna.
+
 ### `ALTER`
 
 Es un _comando_ que nos permite **modificar una tabla**.
