@@ -38,6 +38,7 @@
 - [Expresiones](https://github.com/undefinedschool/notes-sql#expresiones)
 - [Funciones de agregación](https://github.com/undefinedschool/notes-sql#funciones-de-agregaci%C3%B3n)
 - [Índices](https://github.com/undefinedschool/notes-sql#%C3%ADndices)
+- [Ejercicios](https://github.com/undefinedschool/notes-sql#ejercicios)
 
 ---
 
@@ -669,3 +670,12 @@ ON person (first_name, last_name);
 ```
 
 En este caso, el nombre del índice es `person_first_name_last_name_idx`. Como convención, se sugiere utilizar `<NOMBRE-TABLA_NOMBRE-COLUMNA(S)_idx>` para nombrar los índices.
+
+---
+
+## Ejercicios
+
+1. Instalar [PostgreSQL](https://www.postgresql.org/) (Ver [PostgreSQL - Instalación](https://github.com/undefinedschool/notes-dbs#instalaci%C3%B3n)).
+2. Práctica con [SQLBolt](https://sqlbolt.com/).
+3. Práctica en [Codewars - SQL for Beginners](https://www.codewars.com/collections/sql-for-beginners).
+4. Práctica en [PostgreSQL Exercises](https://pgexercises.com/gettingstarted.html).
