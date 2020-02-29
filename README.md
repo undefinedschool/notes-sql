@@ -688,7 +688,8 @@ En este caso, el nombre del índice es `person_first_name_last_name_idx`. Como c
 
 ## Ejercicios
 
-1. Instalar [PostgreSQL](https://www.postgresql.org/) (Ver [PostgreSQL - Instalación](https://github.com/undefinedschool/notes-dbs#instalaci%C3%B3n)).
-2. Práctica con [SQLBolt](https://sqlbolt.com/).
-3. Práctica en [Codewars - SQL for Beginners](https://www.codewars.com/collections/sql-for-beginners).
-4. Práctica en [PostgreSQL Exercises](https://pgexercises.com/gettingstarted.html).
+1. Práctica con [SQLBolt](https://sqlbolt.com/).
+2. Completar los ejercicios de [Codewars - SQL for Beginners](https://www.codewars.com/collections/sql-for-beginners).
+3. Completar los ejercicios de [SQL - CRUD Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/02-crud_operators.md).
+4. Completar los ejercicios de [SQL - Aggregates Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/03-aggregates.md).
+5. Práctica en [PostgreSQL Exercises](https://pgexercises.com/gettingstarted.html).
