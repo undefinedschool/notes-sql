@@ -5,6 +5,8 @@
 
 # ![Notas sobre SQL](https://i.imgur.com/wTVGbtA.png)
 
+## Notas relacionadas
+
 ### `databases`
 
 - [**Bases De Datos**](https://github.com/undefinedschool/notes-dbs)
