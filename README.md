@@ -65,6 +65,8 @@
 [![Introduction to SQL](https://img.youtube.com/vi/OfM5lC-7R4Y/0.jpg)](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
 > Ver [Introduction to SQL](https://www.youtube.com/watch?v=OfM5lC-7R4Y&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt)
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## Comandos y cláusulas
 
 Una _query_ está compuesta por _comandos_ y _cláusulas_. 
@@ -72,9 +74,13 @@ Una _query_ está compuesta por _comandos_ y _cláusulas_.
 - **Comandos:** son los que utilizamos para crear y definir nuevas bases de datos, campos e índices. También para seleccionar, insertar, eliminar y actualizar datos, generar consultas para ordenar, filtrar y extraer datos de la base de datos.
 - **Cláusulas:** son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular. **El orden de las cláusulas importa**.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## DDL: Comandos para modificar el _schema_
 
 Los comandos _DDL_ (Data Definition Language) son aquellos que utilizamos para crear, modificar y eliminar tablas, columnas y bases de datos.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `CREATE DATABASE`
 
@@ -99,6 +105,8 @@ create database testingdb;
 
 Por convención, se suele utilizar mayúsculas para comandos y cláusulas y minúsculas para el resto.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `CREATE TABLE`
 
 Es el _comando_ que utilizamos para **crear una nueva tabla**.
@@ -114,6 +122,8 @@ CREATE TABLE movies (
 ```
 
 En el ejemplo de arriba, `movies` es el nombre de la tabla que estamos creando. `id`, `title`, `overview`, `release_date` y `remove_this` son columnas que estamos definiendo en la tabla. `SERIAL`, `VARCHAR`, `CHAR` y `DATE` son ejemplos de [tipos de datos](https://github.com/undefinedschool/notes-dbs#tipos-de-datos). `PRIMARY KEY` es una _constraint_ (restricción) impuesta en la columna.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `ALTER`
 
@@ -165,6 +175,8 @@ ALTER TABLE users
 ADD CONSTRAINT favorite_number NOT NULL;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `DROP`
 
 Es un _comando_ que nos permite **eliminar tablas o la base de datos entera**.
@@ -181,9 +193,13 @@ Para **eliminar una db**, usamos `DROP DATABASE`
 DROP DATABASE testingdb;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## DML: Comandos para trabajar con los datos
 
 Los comandos _DML_ (Data Manipulation Language) son aquellos que utilizamos para crear, leer, modificar, manipular y eliminar datos de registros (filas).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### CRUD
 
@@ -195,6 +211,8 @@ Cuando realizamos [_operaciones CRUD_](https://github.com/undefinedschool/notes-
 | Read | SELECT |
 | Update | UPDATE |
 | Delete | DELETE |
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `INSERT`
 
@@ -216,6 +234,8 @@ VALUES
   (1, 'Hello, World!')
   (2, 'Hello again, world!');
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `SELECT`
 
@@ -239,6 +259,8 @@ También podemos traer varias columnas. El orden en el que las seleccionemos ser
 SELECT title, rate FROM movies;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 #### `DISTINCT`
 
 Si queremos filtrar datos (filas) duplicados, podemos utilizar `DISTINCT` junto con `SELECT`
@@ -249,6 +271,8 @@ SELECT DISTINCT
 FROM
   earthquake;
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `ORDER BY`
 
@@ -281,6 +305,8 @@ FROM customers
 ORDER BY state DESC, first_name DESC;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `WHERE`
 
 Es la _cláusula_ que utilizamos para **establecer las condiciones o criterios que deben cumplir los campos que queremos seleccionar**. Nos permite **especificar las filas que nos interesan** y por lo tanto, **funciona como un filtro**
@@ -309,6 +335,8 @@ ORDER BY
 
 > 👉 Como dijimos al principio, **el orden de las cláusulas importa**: `SELECT`, `FROM`, `WHERE` y `ORDER BY` siempre deben usarse en ese orden y no en otro, sino tendremos un error de sintaxis y la instrucción no va a ejecutarse.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `LIMIT`
 
 Es la _cláusula_ que nos permite **limitar la cantidad de resultados (filas) a mostrar**. Por ejemplo, si sólo nos interesa el primer resultado, podemos hacer
@@ -324,6 +352,8 @@ LIMIT
   1;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `OFFSET`
 
 Opcionalmente (por ejemplo, si queremos utilizar [paginación](https://www.citusdata.com/blog/2016/03/30/five-ways-to-paginate/)), podemos proveer (como primer parámetro) un `OFFSET` para saltear algunos registros
@@ -335,6 +365,8 @@ SELECT *
 FROM customers
 LIMIT 6, 3 /* offset: 6, limit: 3 */
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `UPDATE`
 
@@ -367,6 +399,8 @@ WHERE
   user_id = 7;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `DELETE`
 
 Es el _comando_ que utilizamos para **eliminar registros de una tabla**.
@@ -389,6 +423,8 @@ DELETE FROM users WHERE id=1; -- will delete a user with an id of 1
 
 [![](https://img.youtube.com/vi/i_cVJgIz_Cs/0.jpg)](https://www.youtube.com/watch?v=i_cVJgIz_Cs)
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## Operadores
 
 ### Comparación
@@ -399,6 +435,8 @@ DELETE FROM users WHERE id=1; -- will delete a user with an id of 1
 - menor o igual (`<=`)
 - igualdad (`=`)
 - desigualdad (`!=` o `<>`)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `AND`
 
@@ -412,6 +450,8 @@ FROM
 WHERE
   rate >= 3 AND rate <= 7;
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `OR`
 
@@ -436,6 +476,8 @@ FROM
 WHERE
   birthdate > '1990-01-01' OR points > 100;
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `NOT`
 
@@ -470,6 +512,8 @@ NOT (OR)                       => AND
 NOT (points > 100)             => (points <= 100)
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `IN/NOT IN`
 
 Es útil cuando un campo puede matchear con varios valores posibles, algo que haríamos utilizando varios `OR`
@@ -499,6 +543,8 @@ SELECT *
 FROM customers
 WHERE state NOT IN ('VA', 'MI', 'FL');
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `LIKE`
 
@@ -549,6 +595,8 @@ En resumen:
 
 > 👉 Ver más detalles sobre [PostgreSQL LIKE](https://www.postgresqltutorial.com/postgresql-like/)
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `BETWEEN`
 
 Se utiliza para obtener resultados que se encuentren dentro de cierto rango (numérico, fechas, etc)
@@ -568,6 +616,8 @@ WHERE points >= 100
   AND points <= 500;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `IS/IS NOT NULL`
 
 Representa la ausencia de valor definido. Por ejemplo, si nos interesan sólo aquellos `customers` con el número de teléfono definido,
@@ -585,6 +635,8 @@ SELECT *
 FROM customers
 WHERE phone IS NULL;
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ## Alias
 
@@ -619,6 +671,8 @@ FROM
   table_name AS 'alias name';
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## Comentarios
 
 Podemos comentar código SQL agregando `--` delante. Como siempre, **el código comentado no se ejecuta**.
@@ -644,6 +698,8 @@ WHERE rate > 7
 LIMIT 1; 
 */
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ## Expresiones
 
@@ -679,6 +735,8 @@ FROM
   customers;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## Funciones de agregación
 
 Las _funciones de agregación_ nos permiten efectuar operaciones sobre un conjunto de resultados, devolviendo un único valor agregado para todos ellos, como pueden ser la cantidad de filas, máximo, mínimo, promedio, etc.
@@ -707,6 +765,8 @@ FROM
   earthquake;
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ## Índices
 
 Para _indexar_ la tabla `person` por las columnas `first_name` y `last_name`, hacemos
@@ -718,6 +778,8 @@ ON person (first_name, last_name);
 
 En este caso, el nombre del índice es `person_first_name_last_name_idx`. Como convención, se sugiere utilizar `<NOMBRE-TABLA_NOMBRE-COLUMNA(S)_idx>` para nombrar los índices.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ---
 
 ## Ejercicios
@@ -726,10 +788,9 @@ En este caso, el nombre del índice es `person_first_name_last_name_idx`. Como c
 2. Completar los ejercicios de [Codewars - SQL for Beginners](https://www.codewars.com/collections/sql-for-beginners).
 3. Completar los ejercicios de [SQL - CRUD Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/02-crud_operators.md).
 4. Completar los ejercicios de [SQL - Aggregates Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/03-aggregates.md).
-
----
-
 5. Práctica en [PostgreSQL Exercises](https://pgexercises.com/gettingstarted.html).
 6. Completar los ejercicios de [SQL-  JOIN Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/04-joins.md).
 7. Completar los ejercicios de [SQL - Normalization Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/05-normalization.md).
 8. Completar los ejercicios de [SQL Assessment](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/07-assessment.md).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
