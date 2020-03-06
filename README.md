@@ -796,9 +796,9 @@ En este caso, el nombre del índice es `person_first_name_last_name_idx`. Como c
 2. Completar los ejercicios de [Codewars - SQL for Beginners](https://www.codewars.com/collections/sql-for-beginners).
 3. Completar los ejercicios de [SQL - CRUD Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/02-crud_operators.md).
 4. Completar los ejercicios de [SQL - Aggregates Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/03-aggregates.md).
-5. Práctica en [PostgreSQL Exercises](https://pgexercises.com/gettingstarted.html).
-6. Completar los ejercicios de [SQL-  JOIN Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/04-joins.md).
-7. Completar los ejercicios de [SQL - Normalization Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/05-normalization.md).
-8. Completar los ejercicios de [SQL Assessment](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/07-assessment.md).
+5. Completar los ejercicios de [SQL-  JOIN Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/04-joins.md).
+6. Completar los ejercicios de [SQL - Normalization Exercises](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/05-normalization.md).
+7. Completar los ejercicios de [SQL Assessment](https://github.com/rithmschool/sql_curriculum_exercises/blob/master/07-assessment.md).
+8. Práctica en [PostgreSQL Exercises](https://pgexercises.com/gettingstarted.html).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
