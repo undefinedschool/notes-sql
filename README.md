@@ -9,7 +9,8 @@
 
 ### `databases`
 
-- [**Bases De Datos**](https://github.com/undefinedschool/notes-dbs)
+- [**Bases De Datos - Intro**](https://github.com/undefinedschool/notes-dbs)
+- [**Bases de Datos - Relaciones**](https://github.com/undefinedschool/notes-dbs-relationships/)
 
 ### `backend`
 
