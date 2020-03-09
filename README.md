@@ -624,6 +624,8 @@ WHERE points >= 100
   AND points <= 500;
 ```
 
+> 👉 También podemos obtener el complemento (valores fuera de cierto rango) utilizando `NOT BETWEEN`.
+
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `IS/IS NOT NULL`
