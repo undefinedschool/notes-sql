@@ -371,7 +371,15 @@ Por ejemplo, si queremos limitar los resultados a 3 y saltear los primeros 6 reg
 ```SQL
 SELECT *
 FROM customers
-LIMIT 6, 3 /* offset: 6, limit: 3 */
+LIMIT 3 OFFSET 6;
+```
+
+o también, usando la notación abreviada
+
+```SQL
+SELECT *
+FROM customers
+LIMIT 6, 3; /* offset: 6, limit: 3 */
 ```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
