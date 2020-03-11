@@ -576,7 +576,7 @@ FROM customers
 WHERE last_name LIKE '%b%'
 ```
 
-> 👉 Notas que estamos usando `'b%'` como patrón, es indistinto si usamos mayúsculas o minúsculas (`'b%'` o `'B%'`), no es _case_sensitive_
+> 👉 Notas que estamos usando `'b%'` como patrón, es indistinto si usamos mayúsculas o minúsculas (`'b%'` o `'B%'`), no es _case sensitive_
 
 **Si en cambio queremos indicar que antes (o después) de cierto caracter puede haber sólo una cantidad exacta, utilizamos `_`**.
 
