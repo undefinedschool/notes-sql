@@ -674,13 +674,13 @@ ON martian.base_id = base.base_id;
 
 ### `LEFT JOIN`
 
-Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ `ON`), y de las que no matchean, retorna las filas de la tabla izquierda (`null`).
+Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ `ON`), y de las que no matchean, retorna las filas de la tabla izquierda y completa con `null` las columnas de las filas de la tabla izquierda que no matchean.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `RIGHT JOIN`
 
-Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ `ON`), y de las que no matchean, retorna las filas de la tabla derecha (`null`).
+Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ `ON`), y de las que no matchean, retorna las filas de la tabla derecha y completa con `null` las columnas de las filas de la tabla derecha que no matchean.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
