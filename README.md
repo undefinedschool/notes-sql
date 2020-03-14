@@ -656,12 +656,12 @@ WHERE phone IS NULL;
 
 ## `JOIN`
 
-[![SQL Joins Explained](https://img.youtube.com/vi/9yeOJ0ZMUYw/0.jpg)](https://www.youtube.com/watch?v=9yeOJ0ZMUYw)
-> Ver [SQL Joins Explained](https://www.youtube.com/watch?v=9yeOJ0ZMUYw)
+[![SQL Joins Examples](https://img.youtube.com/vi/Jh_pvk48jHA/0.jpg)](https://www.youtube.com/watch?v=Jh_pvk48jHA)
+> Ver [SQL Joins Examples](https://www.youtube.com/watch?v=Jh_pvk48jHA)
 
 ### `INNER JOIN`
 
-Retorna filas conectadas (por alguna key), que matcheen en ambas tablas.
+También conocido simplemente como `JOIN`, retorna filas conectadas (por alguna key, definida en la _constraint_ `ON`), que matcheen en ambas tablas.
 
 ```SQL
 SELECT *
@@ -674,13 +674,13 @@ ON martian.base_id = base.base_id;
 
 ### `LEFT JOIN`
 
-Retorna todas las filas conectadas (por alguna key), y de las que no matchean, retorna las filas de la tabla izquierda (`null`).
+Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ `ON`), y de las que no matchean, retorna las filas de la tabla izquierda (`null`).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ### `RIGHT JOIN`
 
-Retorna todas las filas conectadas (por alguna key), y de las que no matchean, retorna las filas de la tabla derecha (`null`).
+Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ `ON`), y de las que no matchean, retorna las filas de la tabla derecha (`null`).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
