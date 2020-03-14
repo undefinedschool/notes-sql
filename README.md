@@ -49,10 +49,14 @@
   - [`IS/IS NOT NULL`](https://github.com/undefinedschool/notes-sql#isis-not-null)
 - [`JOIN`](https://github.com/undefinedschool/notes-sql/blob/master/README.md#join)
   - [`INNER JOIN`](https://github.com/undefinedschool/notes-sql#inner-join)
+  - [`LEFT JOIN`](https://github.com/undefinedschool/notes-sql#left-join)
+  - [`RIGHT JOIN`](https://github.com/undefinedschool/notes-sql#right-join)
+  - [`FULL JOIN`](https://github.com/undefinedschool/notes-sql#full-join)
 - [Alias](https://github.com/undefinedschool/notes-sql#alias)
 - [Comentarios](https://github.com/undefinedschool/notes-sql#comentarios)
 - [Expresiones](https://github.com/undefinedschool/notes-sql#expresiones)
 - [Funciones de agregación](https://github.com/undefinedschool/notes-sql#funciones-de-agregaci%C3%B3n)
+  - [`HAVING`](https://github.com/undefinedschool/notes-sql#having)
 - [Índices](https://github.com/undefinedschool/notes-sql#%C3%ADndices)
 - [Ejercicios](https://github.com/undefinedschool/notes-sql#ejercicios)
 
@@ -652,7 +656,12 @@ WHERE phone IS NULL;
 
 ## `JOIN`
 
+[![SQL Joins Explained](https://img.youtube.com/vi/9yeOJ0ZMUYw/0.jpg)](https://www.youtube.com/watch?v=9yeOJ0ZMUYw)
+> Ver [SQL Joins Explained](https://www.youtube.com/watch?v=9yeOJ0ZMUYw)
+
 ### `INNER JOIN`
+
+Retorna filas conectadas (por alguna key), que matcheen en ambas tablas.
 
 ```SQL
 SELECT *
@@ -660,6 +669,24 @@ FROM martian
 INNER JOIN base
 ON martian.base_id = base.base_id;
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+### `LEFT JOIN`
+
+Retorna todas las filas conectadas (por alguna key), y de las que no matchean, retorna las filas de la tabla izquierda (`null`).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+### `RIGHT JOIN`
+
+Retorna todas las filas conectadas (por alguna key), y de las que no matchean, retorna las filas de la tabla derecha (`null`).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+### `FULL JOIN`
+
+También conocido como `FULL OUTER JOIN`. Es una combinación del `LEFT JOIN` y `RIGHT JOIN`. Retorna todas las filas, conectadas y no conectadas, tanto de la tabla izquierda como de la derecha.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
@@ -791,6 +818,22 @@ FROM
 ```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+### `HAVING`
+
+Sirve para setear condiciones y filtrar según algún criterio, similar a lo que haríamos con `WHERE`. La cláusula `HAVING` se agregó a SQL porque `WHERE` no puede utilizarse con funciones de agregación.
+
+- `HAVING` filtra registros obtenidos a partir de resultados resumidos por `GROUP BY`.
+- `HAVING` aplica a un conjunto resumido de registros, mientras que `WHERE` aplica a registros individuales.
+- `HAVING` requiere que la cláusula `GROUP BY` esté presente.
+- `WHERE` y `HAVING` pueden utilizarse en la misma query.
+
+```SQL
+SELECT COUNT(customer_id), country
+FROM customers
+GROUP BY country
+HAVING COUNT(customer_id) > 5;
+```
 
 ## Índices
 
