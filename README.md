@@ -47,6 +47,8 @@
   - [`LIKE`](https://github.com/undefinedschool/notes-sql#like)
   - [`BETWEEN`](https://github.com/undefinedschool/notes-sql#between)
   - [`IS/IS NOT NULL`](https://github.com/undefinedschool/notes-sql#isis-not-null)
+- [`JOIN`](https://github.com/undefinedschool/notes-sql/blob/master/README.md#join)
+  - [`INNER JOIN`](https://github.com/undefinedschool/notes-sql#inner-join)
 - [Alias](https://github.com/undefinedschool/notes-sql#alias)
 - [Comentarios](https://github.com/undefinedschool/notes-sql#comentarios)
 - [Expresiones](https://github.com/undefinedschool/notes-sql#expresiones)
@@ -644,6 +646,19 @@ Para traer resultados donde un campo es nulo, ya sea porque no nos interesa el v
 SELECT *
 FROM customers
 WHERE phone IS NULL;
+```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+## `JOIN`
+
+### `INNER JOIN`
+
+```SQL
+SELECT *
+FROM martian
+INNER JOIN base
+ON martian.base_id = base.base_id;
 ```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
