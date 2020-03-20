@@ -661,7 +661,7 @@ WHERE phone IS NULL;
 
 ### `INNER JOIN`
 
-También conocido simplemente como `JOIN`, retorna filas conectadas (por alguna key, definida en la _constraint_ `ON`), que matcheen en ambas tablas.
+También conocido simplemente como `JOIN`, retorna sólo las filas conectadas (por alguna key, definida en la _constraint_ `ON`), que matcheen en ambas tablas.
 
 ```SQL
 SELECT *
