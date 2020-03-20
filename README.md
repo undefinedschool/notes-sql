@@ -688,6 +688,8 @@ Retorna todas las filas conectadas (por alguna key, definida en la _constraint_ 
 
 También conocido como `FULL OUTER JOIN`. Es una combinación del `LEFT JOIN` y `RIGHT JOIN`. Retorna todas las filas, conectadas y no conectadas, tanto de la tabla izquierda como de la derecha.
 
+Si hay filas de la tabla que se quiere _joinear_ que no matchean, se setea `NULL` en cada columna de la tabla que tenga una fila desconectada.
+
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ## Alias
