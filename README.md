@@ -56,6 +56,7 @@
 - [Comentarios](https://github.com/undefinedschool/notes-sql#comentarios)
 - [Expresiones](https://github.com/undefinedschool/notes-sql#expresiones)
 - [Funciones de agregación](https://github.com/undefinedschool/notes-sql#funciones-de-agregaci%C3%B3n)
+  - [`GROUP BY`](https://github.com/undefinedschool/notes-sql#group-by)
   - [`HAVING`](https://github.com/undefinedschool/notes-sql#having)
 - [Índices](https://github.com/undefinedschool/notes-sql#%C3%ADndices)
 - [Ejercicios](https://github.com/undefinedschool/notes-sql#ejercicios)
@@ -821,9 +822,31 @@ FROM
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
+### `GROUP BY`
+
+La cláusula `GROUP BY` sirve para agrupar las filas de los resultados obtenidos a partir del `SELECT`. Para cada grupo, podemos aplicar alguna función de agregación (por ejemplo, `SUM()` para calcular la suma de items o `COUNT()` para obtener la cantidad de items en un grupo).
+
+`GROUP BY` debe definirse luego de las cláusulas `FROM` o `WHERE`. Luego, definimos la columna o lista de columnas, separadas por comas, por las que queremos agrupar los resultados.
+
+```SQL
+SELECT 
+   column_1, 
+   column_2,
+   aggregate_function(column_3)
+FROM 
+   table_name
+GROUP BY 
+   column_1,
+   column_2;
+```
+
+> 👉 Ver **[`PostgreSQL GROUP BY`](https://www.postgresqltutorial.com/postgresql-group-by/)**
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
 ### `HAVING`
 
-Sirve para setear condiciones y filtrar según algún criterio, similar a lo que haríamos con `WHERE`. La cláusula `HAVING` se agregó a SQL porque `WHERE` no puede utilizarse con funciones de agregación.
+Sirve para setear condiciones y filtrar según algún criterio en una cláusula `GROUP BY`, similar a lo que haríamos con `WHERE`. La cláusula `HAVING` se agregó a SQL porque `WHERE` no puede utilizarse con funciones de agregación.
 
 - `HAVING` filtra registros obtenidos a partir de resultados resumidos por `GROUP BY`.
 - `HAVING` aplica a un conjunto resumido de registros, mientras que `WHERE` aplica a registros individuales.
@@ -836,6 +859,8 @@ FROM customers
 GROUP BY country
 HAVING COUNT(customer_id) > 5;
 ```
+
+> 👉 Ver **[`PostgreSQL HAVING`](https://www.postgresqltutorial.com/postgresql-having/)**
 
 ## Índices
 
