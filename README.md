@@ -58,6 +58,8 @@
 - [Funciones de agregación](https://github.com/undefinedschool/notes-sql#funciones-de-agregaci%C3%B3n)
   - [`GROUP BY`](https://github.com/undefinedschool/notes-sql#group-by)
   - [`HAVING`](https://github.com/undefinedschool/notes-sql#having)
+- [Funciones](https://github.com/undefinedschool/notes-sql#funciones)
+  - [`ROUND`](https://github.com/undefinedschool/notes-sql#round)
 - [Índices](https://github.com/undefinedschool/notes-sql#%C3%ADndices)
 - [Ejercicios](https://github.com/undefinedschool/notes-sql#ejercicios)
 
@@ -863,6 +865,18 @@ HAVING COUNT(customer_id) > 5;
 ```
 
 > 👉 Ver **[`PostgreSQL HAVING`](https://www.postgresqltutorial.com/postgresql-having/)**
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+## Funciones
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
+
+### `ROUND`
+
+> 👉 Ver **[`PostgreSQL ROUND Function`](https://www.postgresqltutorial.com/postgresql-round/)**
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-sql/#contenido)
 
 ## Índices
 
