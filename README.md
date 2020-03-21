@@ -846,7 +846,9 @@ GROUP BY
 
 ### `HAVING`
 
-Sirve para setear condiciones y filtrar según algún criterio en una cláusula `GROUP BY`, similar a lo que haríamos con `WHERE`. La cláusula `HAVING` se agregó a SQL porque `WHERE` no puede utilizarse con funciones de agregación.
+Sirve para setear condiciones y filtrar grupos de resultados según algún criterio (en una cláusula `GROUP BY` o funciones de agregación), similar a lo que haríamos con `WHERE`. 
+
+> tener en cuenta que `WHERE` sólo puede utilizarse para filtrar resultados individuales (filas).
 
 - `HAVING` filtra registros obtenidos a partir de resultados resumidos por `GROUP BY`.
 - `HAVING` aplica a un conjunto resumido de registros, mientras que `WHERE` aplica a registros individuales.
