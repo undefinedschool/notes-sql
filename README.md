@@ -850,6 +850,8 @@ GROUP BY
 
 Sirve para setear condiciones y filtrar grupos de resultados según algún criterio (en una cláusula `GROUP BY` o funciones de agregación), similar a lo que haríamos con `WHERE`. 
 
+Podemos utilizar `WHERE` y `HAVING` en la misma query.
+
 > tener en cuenta que `WHERE` sólo puede utilizarse para filtrar resultados individuales (filas).
 
 - `HAVING` filtra registros obtenidos a partir de resultados resumidos por `GROUP BY`.
