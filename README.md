@@ -98,6 +98,14 @@ CREATE DATABASE
   testingdb;
 ```
 
+Luego podemos verificar que se haya creado correctamente, usando el comando
+
+```sql
+SHOW DATABASES;
+```
+
+y observando que aparezca listada.
+
 > 👉 **SQL no es _case sensitive_** es decir, no diferencia entre mayúsculas y minúsculas, por lo que podríamos escribir la query anterior de la forma
 
 ```sql
